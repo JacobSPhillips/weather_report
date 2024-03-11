@@ -1,13 +1,13 @@
-import requests
-import pyfiglet
+from requests import get
+from pyfiglet import figlet_format
 
-print(pyfiglet.figlet_format("WEATHER REPORT"))  # prints title
+print(figlet_format("WEATHER REPORT"))  # prints title
 api_key = "348f97246e54ba434c5e50142310d2a2"  # key used to access websites API
 city = input("What city do you live in: ")  # user inputs a city for the website to use
 # f string as the URL that changes based on the city
 url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
-res = requests.get(url)  # requests the information of the URL
+res = get(url)  # requests the information of the URL
 data = res.json()  # changes the information to accessible python
 
 weather = data["weather"][0]["description"]  # creates a variable for the description of the weather
