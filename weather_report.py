@@ -5,7 +5,7 @@ print(figlet_format("WEATHER REPORT"))  # prints title
 
 loop = 'yes'
 while loop == "y" or loop == "yes":
-    api_key = "ee0e75237c8ad666eeb3275fd07dc49a"  # key used to access websites API
+    api_key = "*****************************"  # key used to access websites API
     city = input("What city do you live in: ")  # user inputs a city for the website to use
     # f string as the URL that changes based on the city
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
